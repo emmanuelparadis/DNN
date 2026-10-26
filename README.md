@@ -1,13 +1,14 @@
-
 # A Fast Neural Network Tool for Big Data Analysis
 
+This is a fork of the DNN package (see information below). I fixed two C++ files so the package can be installed on a recent version of R (4.6.1).
 
+See package [hann](https://github.com/emmanuelparadis/hann) for a similar project.
 
 # Introduction
  
 This package implements a deep neural network (MLP) for big data analysis. The remarkable feature of this package is, it estimates the effect size of each variable in an interpretable way, for example, G(aX+b, G is an activation function, and a is effect size) to represent an nonlinear interpretation of neural networks. It is good at dealing with nonlinear problems, particularly for genomic studies. There are multiple functions that can be extended to other Omics data analysis. This package adopted optimized algorithms such as backpropagation, Rprop, simulated annealing, stochastic gradient and pruning algorithms such as minimum magnitude, Optimal Brain Surgeon based on a fast implementation of compressed neural networks (Grzegorz Klima, 2016).
       
-Welcome any [feedback](https://github.com/xinghuq/DNN/issues) and [pull request](https://github.com/xinghuq/DNN/pulls).  
+Welcome any [feedback](https://github.com/xinghuq/DNN/issues) and [pull request](https://github.com/xinghuq/DNN/pulls).
 
 
 ## Install the package
