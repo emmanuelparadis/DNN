@@ -43,7 +43,7 @@ mlp_construct(SEXP lays)
         DNN::internal::mlp_construct(layers, n_p, n_prev, n_next,
                                       w_p, w_val, w_fl, w_on);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+	Rf_error("%s", e.what());
     }
 
     SEXP wrap_n_p, wrap_n_prev, wrap_n_next,
@@ -93,7 +93,7 @@ mlp_expand_reorder_inputs(SEXP lays, SEXP np, SEXP nprev, SEXP nnext,
         DNN::internal::mlp_expand_reorder_inputs(layers, n_p, n_prev, n_next,
                                                   w_p, w_val, w_fl, nnew, mapi);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 
     SEXP wrap_layers, wrap_n_p, wrap_n_prev, wrap_n_next,
@@ -241,7 +241,7 @@ mlp_merge(SEXP Alays, SEXP Awp, SEXP Awval, SEXP Awfl,
                                   layers, n_p, n_prev, n_next,
                                   w_p, w_val, w_fl, w_on);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 
     SEXP wrap_layers, wrap_n_p, wrap_n_prev, wrap_n_next,
@@ -296,7 +296,7 @@ mlp_stack(SEXP Alays, SEXP Awp, SEXP Awval, SEXP Awfl,
                                   layers, n_p, n_prev, n_next,
                                   w_p, w_val, w_fl, w_on);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 
     SEXP wrap_layers, wrap_n_p, wrap_n_prev, wrap_n_next,
@@ -426,7 +426,7 @@ mlp_export_C(SEXP fname,
                                                        af, af_p, with_bp,
                                                        Aptr, bptr, Cptr, dptr, Eptr, fptr));
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 }
 
@@ -514,7 +514,7 @@ mlp_grad(const int *lays, const int *no_lays, const int *n_pts,
                                         *no_datarows, in, out, msegrad + 1);
         msegrad[0] = mse;
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 }
 
@@ -534,7 +534,7 @@ mlp_gradi(const int *lays, const int *no_lays, const int *n_pts,
                             af, af_p,
                             *no_datarows, *i - 1, in, out, grad);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 }
 
@@ -554,7 +554,7 @@ mlp_gradij(const int *lays, const int *no_lays, const int *n_pts,
                             af, af_p,
                             *no_datarows, *i - 1, in, grad);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 }
 
@@ -574,7 +574,7 @@ mlp_jacob(const int *lays, const int *no_lays, const int *n_pts,
                               af, af_p,
                               *no_datarows, *i - 1, in, jacob);
     } catch (DNN::exception &e) {
-        Rf_error(e.what());
+        Rf_error("%s", e.what());
     }
 }
 

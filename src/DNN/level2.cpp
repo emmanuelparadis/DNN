@@ -62,7 +62,8 @@ DNN::internal::backprop(const int *lays, int no_lays, const int *n_pts,
 {
     // initialisation
     int l = no_lays - 1, ni = n_pts[no_lays] - 1, wi = no_weights, nlpl;
-    register T d;
+    //register
+    T d;
     int actf; T actfp;
     // output and hidden layers except for the 1st
     for (; l > 1; --l) {
@@ -99,7 +100,8 @@ DNN::internal::backpropj(const int *lays, int no_lays, const int *n_pts, int j,
     // initialisation
     int l = no_lays - 1, ni = n_pts[l] + j,
         wi = w_pts[l] + j * (1 + lays[l - 1]) + 1, nlpl;
-    register T d;
+    //register
+    T d;
     int actf; T actfp;
     // jth output neuron delta
     actf = af[l]; actfp = af_p[l];
@@ -145,7 +147,8 @@ DNN::internal::backpropjd(const int *lays, int no_lays, const int *n_pts, int j,
     // initialisation
     int l = no_lays - 1, ni = n_pts[l] + j,
         wi = w_pts[l] + j * (1 + lays[l - 1]) + 1, nlpl;
-    register T d;
+    //register
+    T d;
     int actf; T actfp;
     // jth output neuron delta
     actf = af[l]; actfp = af_p[l];
