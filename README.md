@@ -1,8 +1,8 @@
-# A Fast Neural Network Tool for Big Data Analysis
-
 This is a fork of the DNN package (see information below). I fixed two C++ files so the package can be installed on a recent version of R (4.6.1).
 
-See package [hann](https://github.com/emmanuelparadis/hann) for a similar project.
+See the package [hann](https://github.com/emmanuelparadis/hann) for a similar project.
+
+# A Fast Neural Network Tool for Big Data Analysis
 
 # Introduction
  
